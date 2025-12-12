@@ -55,20 +55,62 @@
 							<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 							<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 
-							<p>Veuillez prendre rendez-vous avec moi via le formulaire ci-dessous</p>
+							<p>Pour prendre rendez-vous avec moi, veuillez introduire votre demande via le formulaire ci-dessous.</p>
+							<p>Quel type de cours souhaitez ?</p>
+							<div>
+							<input type="radio" id="cours1" name="cours" value="Cours de chant (pop / variété / moderne)" required>
+							<label for="cours1">Cours de chant (pop / variété / moderne)</label>
+							</div>
+
+							<div>
+							<input type="radio" id="cours2" name="cours" value="Cours de chant (classique / lyrique)">
+							<label for="cours2">Cours de chant (classique / lyrique)</label>
+							</div>
+
+							<div>
+							<input type="radio" id="cours3" name="cours" value="Eveil et formation musicale">
+							<label for="cours3">Eveil et formation musicale</label>
+							</div>
+
+							<div>
+							<input type="radio" id="cours4" name="cours" value="Piano">
+							<label for="cours4">Piano</label>
+							</div>
 
 							<!-- Calendly widget container -->
 							<div class="calendly-container" id="calendlyWidget"></div>
 
+							<!-- Calendly JS -->
+							<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+							<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+
 							<script>
-							Calendly.initInlineWidget({
-								url: 'https://calendly.com/violettecasta/30min', // replace with your event URL
+							// Function to load Calendly with selected course
+							function loadCalendly(courseValue) {
+								// Clear any previous widget
+								document.getElementById('calendlyWidget').innerHTML = '';
+
+								Calendly.initInlineWidget({
+								url: 'https://calendly.com/violettecasta/30min',
 								parentElement: document.getElementById('calendlyWidget'),
-								prefill: {},
+								prefill: {
+									customAnswers: {
+									a1: courseValue // replace 'a1' with your actual custom question ID in Calendly
+									}
+								},
 								utm: {},
 								locale: 'fr'
+								});
+							}
+
+							// Add event listeners to all radio buttons
+							document.querySelectorAll('input[name="cours"]').forEach(radio => {
+								radio.addEventListener('change', function() {
+								loadCalendly(this.value);
+								});
 							});
 							</script>
+
 
 
 						</div>
