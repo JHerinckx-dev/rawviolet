@@ -27,7 +27,7 @@
       submitBtn.value = "Envoi...";
 
       emailjs.sendForm(
-        "service_5aawgkn",
+        "service_bmswb2u",
         "template_vuqyoff",
         form
       ).then(
