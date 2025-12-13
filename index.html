@@ -153,26 +153,27 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form id = "contact-form" method="post" action="#">
+							<form id="contact-form" method="POST" action="https://formspree.io/f/myzronwk">
 								<div class="fields">
-									<div class="field">
-										<label for="name">Votre Nom</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Votre Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
+								<div class="field">
+									<label for="name">Votre Nom</label>
+									<input type="text" name="name" id="name" required />
+								</div>
+								<div class="field">
+									<label for="email">Votre Email</label>
+									<input type="email" name="email" id="email" required />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="3" required></textarea>
+								</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Envoyer" /></li>
+								<li><input type="submit" value="Envoyer" /></li>
 								</ul>
 							</form>
-						</section>
+							</section>
+
 					
 						<section class="split contact">
 							<section class="alt">
@@ -211,8 +212,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-			<script src="/js/email.js"></script>
+
 
 	</body>
 </html>
