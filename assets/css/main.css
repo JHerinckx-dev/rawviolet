@@ -813,10 +813,7 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1280px) {
-			.image {
-				scale : 0.4;
-			}
-
+	
 			.row {
 				display: flex;
 				flex-wrap: wrap;
