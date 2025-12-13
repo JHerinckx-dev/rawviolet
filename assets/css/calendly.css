@@ -1,13 +1,27 @@
   /* Center the Calendly widget on the page */
+  .calendly-wrapper {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    padding: 40px 0;  
+    height:auto;       /* spacing top/bottom */
+  }
+
+  /* Calendly container styling */
   .calendly-container {
-    max-width: 800px;      /* Maximum width of the calendar */
-    min-width: 320px;      /* Minimum width for mobile */
-    height: 700px;         /* Default height, can adjust if needed */
-    margin: 40px auto;     /* Center horizontally with some spacing on top/bottom */
-    border: 1px solid #ddd;/* Optional border for better appearance */
-    border-radius: 12px;   /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Soft shadow */
-    overflow: hidden;      /* Prevent scrollbars inside container */
+    max-width: 800px;
+    min-width: 320px;
+    width: 90%;               /* responsive width */
+    height: 900px;
+    overflow: hidden;
+    visibility:hidden;
+    scale:1.2;
+  }
+
+  .calendly-content{
+        border:0px !important; 
+        padding-top: 0px !important; 
+        padding-bottom:0px !important; 
+        
   }
 
   /* Responsive adjustments */
